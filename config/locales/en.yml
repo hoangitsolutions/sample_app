@@ -30,4 +30,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  static_pages:
+    about:
+      about: "About"
+      hello: "Hello world"
+      rubyonrailstutorrial: "Ruby on Rails Tutorial"
+      isa: "is a"
+      book: "book"
+      and: "and"
+      screencastseries: "screencast series"
+      toteachwebdevelopmentwith: "to teach web development with"
+      rubyonrails: "Ruby on Rails"
+      applicationforthetutorial: "This is the sample application for the tutorial."
+  title: "Ruby on Rails Tutorial Sample App"
