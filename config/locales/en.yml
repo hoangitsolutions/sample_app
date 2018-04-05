@@ -28,18 +28,32 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   static_pages:
+    home:
+      title: "Home"
+      text-1: "This is the home page for the"
+      text-2: "Rails Tutorial"
+      text-3: "sample application"
+    help:
+      title: "Help"
+      text-1: "This is the home page for the"
+      text-2: "Rails Tutorial help page"
+      text-3: "To get help on this sample app, see the"
+      text-4: "Get help on the Ruby on Rails Tutorial at the"
+      text-5: "Ruby on Rails Tutorial"
+
     about:
-      about: "About"
-      hello: "Hello world"
-      rubyonrailstutorrial: "Ruby on Rails Tutorial"
-      isa: "is a"
-      book: "book"
-      and: "and"
-      screencastseries: "screencast series"
-      toteachwebdevelopmentwith: "to teach web development with"
-      rubyonrails: "Ruby on Rails"
-      applicationforthetutorial: "This is the sample application for the tutorial."
-  title: "Ruby on Rails Tutorial Sample App"
+      title: "About"
+      text-1: "book"
+      text-2: "screencast series"
+      text-3: "This is the sample application for the tutorial."
+      text-4: "Tutorial"
+      text-5: "is a"
+      text-6: "and"
+      text-7: "to teach web development with"
+    contact:
+      title: "Contact"
+      text-1 : "Contact the Ruby on Rails Tutorial about the sample app at the"
+      text-2 : "contact page"
+  base_title: "Ruby on rails"
