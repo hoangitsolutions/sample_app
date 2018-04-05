@@ -31,3 +31,15 @@
 
 en:
   hello: "Hello world"
+<<<<<<< HEAD
+
+=======
+  rubyonrailstutorrial: "Ruby on Rails Tutorial"
+  isa : "is a"
+  book : "book"
+  and : "and"
+  screencastseries : "screencast series"
+  toteachwebdevelopmentwith : "to teach web development with"
+  rubyonrails : "Ruby on Rails"
+  applicationforthetutorial : "This is the sample application for the tutorial."
+>>>>>>> 1df3a11... Finish Chapter 3
