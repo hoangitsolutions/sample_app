@@ -30,11 +30,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 en:
   static_pages:
+
     home:
       title: "Home"
       text-1: "This is the home page for the"
       text-2: "Rails Tutorial"
       text-3: "sample application"
+      text-4: "Sign up to!"
+      text-5: "Welcome to the Sample App"
+      sample_app: "sample app"
+      text-6: "Rails logo"
     help:
       title: "Help"
       text-1: "This is the home page for the"
@@ -52,8 +57,20 @@ en:
       text-5: "is a"
       text-6: "and"
       text-7: "to teach web development with"
+      text-8: "Tutorial"
     contact:
       title: "Contact"
       text-1 : "Contact the Ruby on Rails Tutorial about the sample app at the"
       text-2 : "contact page"
+    signup:
+      title: "Log in"
+  users:
+    new:
+      title: "Sign up"
+      text-1: "This will be a signup page for new users."
   base_title: "Ruby on rails"
+  text-3: "Ruby on Rails Tutorrial"
+  text-1: "Michael Hartl"
+  text-2: "News"
+  text-4: "The"
+  text-5: "by"
