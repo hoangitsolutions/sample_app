@@ -1,32 +1,5 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-/* mixins, variables, etc. */
-
-$gray-medium-light: #eaeaea;
-
-/* universal */
-
-body {
-  padding-top: 60px;
-}
-
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
-}
-
-/* typography */
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -53,9 +26,6 @@ p {
   line-height: 1.7em;
 }
 
-
-/* header */
-
 #logo {
   float: left;
   margin-right: 10px;
@@ -69,34 +39,4 @@ p {
     color: white;
     text-decoration: none;
   }
-}
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
 }
