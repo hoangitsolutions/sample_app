@@ -1,30 +1,81 @@
 class UsersController < ApplicationController
+  before_action :load_user, except: %i(index new create)
+  before_action :logged_in_user, except: %i(new create)
+  before_action :correct_user, only: %i(edit update)
+  before_action :admin_user, only: :destroy
 
   def show
-   @user = User.find_by id: params[:id]
-   unless @user
-    flash[:danger] = I18n.t ".nouser"
+    @user = User.find_by id: params[:id]
+    return if @user
+    flash[:danger] = t ".nouser"
     redirect_to root_url
   end
-end
 
-def new
-  @user = User.new
-end
-
-def create
-  @user = User.new user_params
-  if @user.save
-    flash[:success] = I18n.t ".welcome_to_app"
-    redirect_to @user
-  else
-    render :new
+  def index
+    @users = User.paginate page: params[:page], per_page: Settings.user.number_items_per_page
   end
-end
 
-private
+  def destroy
+    if @user.destroy
+      flash[:success] = t "users.index.success_msg"
+    else
+      flash[:danger] = t "users.index.error_msg"
+    end
+    redirect_to users_url
+  end
 
-def user_params
-  params.require(:user).permit :name, :email, :password, :password_confirmation
-end
+  def edit; end
+
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new user_params
+    if @user.save
+      log_in @user
+      flash[:success] = t ".welcome_to_app"
+      redirect_to @user
+    else
+      render :new
+    end
+  end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t ".profileup"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  private
+
+  def logged_in_user
+    return if logged_in?
+    store_location
+    flash[:danger] = t ".pleaselog"
+    redirect_to login_url
+  end
+
+  def correct_user
+    @user = User.find_by id: params[:id]
+    redirect_to(root_url) unless current_user?(@user)
+  end
+
+  def user_params
+    params.require(:user).permit :name, :email, :password, :password_confirmation
+  end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user.present?
+    flash[:danger] = t ".nouser"
+    redirect_to root_url
+  end
 end

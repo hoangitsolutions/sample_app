@@ -4,18 +4,20 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by email: params[:session][:email].downcase
     if user && password_authenticate?(user)
-      log_in user
-      params[:session][:remember_me] == Settings.sessions.remember ? remember(user) : forget(user)
-      redirect_to user
+      action_vactivated? user
     else
-      flash.now[:danger] = I18n.t ".invalid"
+      flash.now[:danger] = t ".invalid"
       render :new
     end
   end
+
   def destroy
     log_out if logged_in?
     redirect_to root_url
   end
+  
+  private
+
   def forget user
     user.forget
     cookies.delete :user_id
