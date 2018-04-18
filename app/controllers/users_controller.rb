@@ -5,10 +5,9 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def show
-    @user = User.find_by id: params[:id]
     return if @user
-    flash[:danger] = t ".nouser"
-    redirect_to root_url
+    flash[:danger] = t "static_pages.nouser"
+    redirect_to root_url && return unless @user
   end
 
   def index
@@ -33,9 +32,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t ".welcome_to_app"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "static_pages.sessions.new.check_email"
+      redirect_to root_url
     else
       render :new
     end
@@ -43,7 +42,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update user_params
-      flash[:success] = t ".profileup"
+      flash[:success] = t "static_pages.profileup"
       redirect_to @user
     else
       render :edit
@@ -55,7 +54,7 @@ class UsersController < ApplicationController
   def logged_in_user
     return if logged_in?
     store_location
-    flash[:danger] = t ".pleaselog"
+    flash[:danger] = t "static_pages.pleaselog"
     redirect_to login_url
   end
 
@@ -75,7 +74,7 @@ class UsersController < ApplicationController
   def load_user
     @user = User.find_by id: params[:id]
     return if @user.present?
-    flash[:danger] = t ".nouser"
+    flash[:danger] = t "static_pages.nouser"
     redirect_to root_url
   end
 end
