@@ -5,10 +5,9 @@
     <%= form_for(:session, url: login_path) do |f| %>
 
     <%= f.label :email, t(".text-1") %>
-    <%= f.email_field :email, class: 'form-control' %>
-
+    <%= f.email_field :email, class: "form-control" %>
     <%= f.label :password, t(".text-2") %>
-    <%= f.password_field :password, class: 'form-control' %>
+    <%= f.password_field :password, class: "form-control" %>
     <%= f.label :remember_me, class: "checkbox inline" do %>
     <%= f.check_box :remember_me%>
     <span><%= t ".text-5" %></span>
