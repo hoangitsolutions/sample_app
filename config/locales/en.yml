@@ -64,6 +64,7 @@ en:
       text-2 : "contact page"
     signup:
       title: "Signup"
+
   users:
     new:
       title: "Sign up"
@@ -76,6 +77,7 @@ en:
   shared:
     error_messages:
       contains: "The form contains"
+
   layout:
     header:
       users: "Users"
@@ -83,6 +85,7 @@ en:
       settings: "Settings"
       logout: "Log out"
       login: "Log in"
+
   sessions:
     new:
       title: "Log in"
@@ -90,6 +93,8 @@ en:
       text-2: "Password"
       text-3: "Sign up now!"
       text-4: "New user?"
+      text-5: "Remember me on this computer"
+
   base_title: "Ruby on rails"
   text-3: "Ruby on Rails Tutorrial"
   text-1: "Michael Hartl"
@@ -99,4 +104,3 @@ en:
   welcome_to_app: "Welcome to the Sample App!"
   invalid: "Invalid email/password combination"
   nouser: "Not find request user"
-
