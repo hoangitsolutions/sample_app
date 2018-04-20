@@ -76,6 +76,20 @@ en:
   shared:
     error_messages:
       contains: "The form contains"
+  layout:
+    header:
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      login: "Log in"
+  sessions:
+    new:
+      title: "Log in"
+      text-1: "Email"
+      text-2: "Password"
+      text-3: "Sign up now!"
+      text-4: "New user?"
   base_title: "Ruby on rails"
   text-3: "Ruby on Rails Tutorrial"
   text-1: "Michael Hartl"
@@ -83,4 +97,6 @@ en:
   text-4: "The"
   text-5: "by"
   welcome_to_app: "Welcome to the Sample App!"
+  invalid: "Invalid email/password combination"
+  nouser: "Not find request user"
 
