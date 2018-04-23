@@ -74,10 +74,29 @@ en:
       text-5: "Name"
       text-6: "Email"
       text-7: "Password"
+    edit:
+      title: "Edit user"
+      text-1: "Update your profile"
+      text-2: "Name"
+      text-3: "Email"
+      text-4: "Password"
+      text-5: "Password Confirmation"
+      text-6: "Save changes"
+    form:
+      text-1: "Name"
+      text-2: "Email"
+      text-3: "Password"
+      text-4: "Password Confirmation"
+    index:
+      title: "All Users"
+      delete : "Delete"
+      confirm: "You sure?"
+      success_msg: "User deleted"
+      error_msg: "Deleted fail"
   shared:
     error_messages:
       contains: "The form contains"
-
+      remember: "Remember me on this computer"
   layout:
     header:
       users: "Users"
@@ -94,7 +113,9 @@ en:
       text-3: "Sign up now!"
       text-4: "New user?"
       text-5: "Remember me on this computer"
-
+      account_not_actived: "Account not activated."
+      check_email: "Check your email for the activation link."
+      forgot_password: "(forgot password)"
   base_title: "Ruby on rails"
   text-3: "Ruby on Rails Tutorrial"
   text-1: "Michael Hartl"
@@ -104,3 +125,6 @@ en:
   welcome_to_app: "Welcome to the Sample App!"
   invalid: "Invalid email/password combination"
   nouser: "Not find request user"
+  profileup: "Profile updated"
+  pleaselog: "Please log in."
+  userdeleted: "User deleted"
