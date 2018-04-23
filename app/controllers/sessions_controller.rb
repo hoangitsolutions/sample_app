@@ -6,16 +6,16 @@ class SessionsController < ApplicationController
     if user && password_authenticate?(user)
       action_vactivated? user
     else
-      flash.now[:danger] = t ".invalid"
+      flash.now[:danger] = t "sessions.new.error_messages"
       render :new
     end
   end
 
   def destroy
-    log_out if logged_in?
+    log_out
     redirect_to root_url
   end
-  
+
   private
 
   def forget user
