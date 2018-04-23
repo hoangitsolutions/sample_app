@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show
     return if @user
-    flash[:danger] = t "static_pages.nouser"
+    flash[:danger] = t "nouser"
     redirect_to root_url && return unless @user
   end
 
@@ -16,9 +16,9 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.destroy
-      flash[:success] = t "users.index.success_msg"
+      flash[:success] = t "static_pages.users.index.success_msg"
     else
-      flash[:danger] = t "users.index.error_msg"
+      flash[:danger] = t "static_pages.users.index.error_msg"
     end
     redirect_to users_url
   end
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update user_params
-      flash[:success] = t "static_pages.profileup"
+      flash[:success] = t "profileup"
       redirect_to @user
     else
       render :edit
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   def logged_in_user
     return if logged_in?
     store_location
-    flash[:danger] = t "static_pages.pleaselog"
+    flash[:danger] = t "pleaselog"
     redirect_to login_url
   end
 
@@ -74,7 +74,7 @@ class UsersController < ApplicationController
   def load_user
     @user = User.find_by id: params[:id]
     return if @user.present?
-    flash[:danger] = t "static_pages.nouser"
+    flash[:danger] = t "nouser"
     redirect_to root_url
   end
 end

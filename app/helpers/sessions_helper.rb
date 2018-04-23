@@ -55,8 +55,8 @@ module SessionsHelper
   end
 
   def send_message_activation
-    message  = I18n.t "sessions.new.account_not_actived"
-    message += I18n.t "sessions.new.check_email"
+    message  = I18n.t ".sessions.new.account_not_actived"
+    message += I18n.t ".sessions.new.check_email"
     flash[:warning] = message
   end
 

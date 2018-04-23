@@ -104,7 +104,6 @@ en:
       settings: "Settings"
       logout: "Log out"
       login: "Log in"
-
   sessions:
     new:
       title: "Log in"
@@ -115,8 +114,18 @@ en:
       text-5: "Remember me on this computer"
       account_not_actived: "Account not activated."
       check_email: "Please check your email to activate your account."
-      forgot_password: "(forgot password)"
+      forgot_password: "forgot password"
       error_messages: "Invalid email/password combination"
+  password_resets:
+    new:
+      title: "Forgot password"
+      text-1: "Email"
+      text-2: "Submit"
+    edit:
+      title: "Reset password"
+      text-1: "Password"
+      text-2: "Password Confirmation"
+      text-3: "Update password"
   base_title: "Ruby on rails"
   text-3: "Ruby on Rails Tutorrial"
   text-1: "Michael Hartl"
@@ -133,3 +142,9 @@ en:
   account_invalid: "Invalid activation link"
   acctivation: "Account activation"
   resetpassword: "Reset Password"
+  emailreset: "Email sent with password reset instructions"
+  emaionotfound: "Email address not found"
+  canempty: "can't be empty"
+  password_reset: "Password has been reset."
+
+  
